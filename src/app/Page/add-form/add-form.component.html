@@ -1,0 +1,87 @@
+<h1 mat-dialog-title>Add New Owner</h1>
+<div mat-dialog-content>
+  <form [formGroup]="addNewOwnerForm" >
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>FirstName</mat-label>
+      <input matInput type="text" formControlName="owner_FirstName" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+        <mat-label> LastName</mat-label>
+        <input matInput type="text" formControlName="owner_LastName" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Mail</mat-label>
+        <input matInput type="email" formControlName="owner_Mail" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Address</mat-label>
+        <input matInput type="text" formControlName="owner_Address" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>About</mat-label>
+        <input matInput type="text" formControlName="owner_About" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>DOB</mat-label>
+        <input matInput type="text" formControlName="owner_DOB" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Phone</mat-label>
+        <input matInput type="text" formControlName="owner_Phone" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>WA_Number</mat-label>
+        <input matInput type="text" formControlName="owner_WA_Number" required>
+      </mat-form-field>
+      
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label> gender</mat-label>
+        <input matInput type="text" formControlName="gender" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label> Nationality</mat-label>
+        <input matInput type="text" formControlName="nationality" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Bank</mat-label>
+        <input matInput type="text" formControlName="owner_Bank" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>BankAccount</mat-label>
+        <input matInput type="text" formControlName="owner_BankAccount" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>BankSwift</mat-label>
+        <input matInput type="text" formControlName="owner_BankSwift" required>
+      </mat-form-field>
+ 
+      <mat-form-field appearance="fill" class="full-width">
+        <label> Photo</label>
+        <input matInput type="text" formControlName="owner_Photo">
+      </mat-form-field> 
+      
+      <!-- <div class="input-group mb-3">
+        <input type="file" class="form-control" formControlName="owner_Photo" (change)="imagePath($event)" required id="inputGroupFile02">
+         <img src="{{path}}" >
+        <label class="input-group-text" for="inputGroupFile02">Photo</label>
+      </div> -->
+
+
+
+    <div mat-dialog-actions>
+      <button mat-button color="warn" (click)="clearAll()" >Cancel</button>
+      <button mat-button type="submit" color="primary" [disabled]="addNewOwnerForm.invalid" (click)="submit()">Submit</button>
+    </div>
+  </form>
+</div>
